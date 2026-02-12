@@ -1,3 +1,4 @@
 actions
 stringFromBytes: aByteArray
-	^aByteArray asString convertFromEncoding: #utf8
+	"Fixed for Pharo 13+ compatibility (convertFromEncoding: removed)"
+	^ aByteArray utf8Decoded
